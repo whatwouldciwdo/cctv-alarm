@@ -1,0 +1,76 @@
+poll_interval_seconds: 10   # jeda antar ping (detik)
+fail_threshold: 3             # 3 kali gagal berturut-turut => DOWN
+recover_threshold: 2          # 2 kali sukses berturut-turut => UP
+cooldown_seconds: 15
+
+
+cameras:
+  - name: Camera-PosSecurityUtama 1
+    host: 192.168.141.111
+  - name: Camera-PosSecurityUtama 2
+    host: 192.168.141.112
+  - name: Camera-ParkirManajemen
+    host: 192.168.141.113
+  - name: Camera-GerbangLama
+    host: 192.168.141.114
+  - name: Camera-ParkiranMotor 1
+    host: 192.168.141.115
+  - name: Camera-ParkiranMotor 2
+    host: 192.168.141.116
+  - name: Camera-BelakangGedungAdmin 1
+    host: 192.168.141.117
+  - name: Camera-BelakangGedungAdmin 2
+    host: 192.168.141.118
+  - name: Camera-BelakangGedungEng
+    host: 192.168.141.119
+  - name: Camera-DepanGedungEng
+    host: 192.168.141.121
+  - name: Camera-GedungGasena 1
+    host: 192.168.141.122
+  - name: Camera-GedungGasena 2
+    host: 192.168.141.123
+  - name: Camera-PosRing1 1
+    host: 192.168.141.124
+  - name: Camera-PosRing1 2
+    host: 192.168.141.125
+  - name: Camera-STBuilding 1
+    host: 192.168.141.126
+  - name: Camera-STBuilding 2
+    host: 192.168.141.127
+  - name: Camera-STBuilding 3
+    host: 192.168.141.128
+  - name: Camera-STBuilding 4
+    host: 192.168.141.129
+  - name: Camera-PosSafemax 1
+    host: 192.168.141.131
+  - name: Camera-PosSafemax 2
+    host: 192.168.141.132
+  - name: Camera-H2Plant 1
+    host: 192.168.141.133
+  - name: Camera-H2Plant 2
+    host: 192.168.141.134
+  - name: Camera-GudangBelakang 1
+    host: 192.168.141.135
+  - name: Camera-GudangBelakang 2
+    host: 192.168.141.136
+  - name: Camera-GudangBelakang 3
+    host: 192.168.141.137
+  - name: Camera-Outfal 1
+    host: 192.168.141.138
+  - name: Camera-Outfal 2
+    host: 192.168.141.139
+  - name: Camera-UjungOutfal 1
+    host: 192.168.141.141
+  - name: Camera-UjungOutfal 2
+    host: 192.168.141.142
+  - name: Camera-Lab 1
+    host: 192.168.141.143
+  - name: Camera-Lab 2
+    host: 192.168.141.144
+  - name: Camera-FirePumpHouse 1
+    host: 192.168.141.145
+  - name: Camera-FirePumpHouse 2
+    host: 192.168.141.146
+  - name: Camera-Intake
+    host: 192.168.141.147
+

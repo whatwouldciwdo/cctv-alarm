@@ -1,0 +1,195 @@
+{
+  "Engineering-StudyRoom": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 819
+  },
+  "Lobby": {
+    "status": "DOWN",
+    "fails": 29,
+    "succ": 0
+  },
+  "Gudang": {
+    "status": "DOWN",
+    "fails": 819,
+    "succ": 0
+  },
+  "Engineering-BelakangENG": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 699
+  },
+  "Camera-PosSecurityUtama 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-PosSecurityUtama 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-ParkirManajemen": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 1219
+  },
+  "Camera-GerbangLama": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 2,
+    "last_down_ts": 1759420784,
+    "last_alert_ts": 1759420864,
+    "last_up_ts": 1759420864
+  },
+  "Camera-ParkiranMotor 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 54705
+  },
+  "Camera-ParkiranMotor 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 54705
+  },
+  "Camera-BelakangGedungAdmin 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 2496
+  },
+  "Camera-BelakangGedungAdmin 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 100
+  },
+  "Camera-BelakangGedungEng": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 24908
+  },
+  "Camera-DepanGedungEng": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 24908
+  },
+  "Camera-GedungGasena 1": {
+    "status": "DOWN",
+    "fails": 62707,
+    "succ": 0
+  },
+  "Camera-GedungGasena 2": {
+    "status": "DOWN",
+    "fails": 62707,
+    "succ": 0
+  },
+  "Camera-PosRing1 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-PosRing1 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-STBuilding 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 3132
+  },
+  "Camera-STBuilding 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 626
+  },
+  "Camera-STBuilding 3": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 3132
+  },
+  "Camera-STBuilding 4": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 3446
+  },
+  "Camera-PosSafemax 1": {
+    "status": "DOWN",
+    "fails": 12959,
+    "succ": 0
+  },
+  "Camera-PosSafemax 2": {
+    "status": "DOWN",
+    "fails": 58636,
+    "succ": 0
+  },
+  "Camera-H2Plant 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 18291
+  },
+  "Camera-H2Plant 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 18291
+  },
+  "Camera-GudangBelakang 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 1160
+  },
+  "Camera-GudangBelakang 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 459
+  },
+  "Camera-GudangBelakang 3": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 161
+  },
+  "Camera-Outfal 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 281
+  },
+  "Camera-Outfal 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 131
+  },
+  "Camera-UjungOutfal 1": {
+    "status": "DOWN",
+    "fails": 1690,
+    "succ": 0
+  },
+  "Camera-UjungOutfal 2": {
+    "status": "DOWN",
+    "fails": 33333,
+    "succ": 0
+  },
+  "Camera-Lab 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-Lab 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-FirePumpHouse 1": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-FirePumpHouse 2": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 62707
+  },
+  "Camera-Intake": {
+    "status": "UP",
+    "fails": 0,
+    "succ": 109
+  }
+}
