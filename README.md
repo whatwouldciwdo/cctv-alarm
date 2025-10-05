@@ -1,6 +1,6 @@
-# CCTV Alarm System
+# Sistem Alarm CCTV
 
-Sistem alarm CCTV yang memantau status kamera secara real-time dan memberikan notifikasi melalui telegram.
+Sistem alarm CCTV yang memantau status kamera secara real-time dan memberikan notifikasi melalui Telegram.
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/username/repo/CI)
 ![Python Version](https://img.shields.io/badge/python-3.11-blue)
@@ -11,24 +11,24 @@ Sistem alarm CCTV yang memantau status kamera secara real-time dan memberikan no
 - [Prasyarat](#prasyarat)
 - [Instalasi](#instalasi)
 - [Konfigurasi](#konfigurasi)
-- [How To Run?](#cara-menjalankan)
+- [Cara Menjalankan](#cara-menjalankan)
 - [Testing](#testing)
 - [Troubleshooting](#troubleshooting)
 - [Deployment](#deployment)
 - [Roadmap](#roadmap)
 
 ## Fitur Utama
-- Memantau status kamera CCTV secara otomatis berupa mengirimkan PING ke setiap kamera.
-- Mengirim notifikasi jika kamera mengalami masalah melalui telegram.
-- Konfigurasi melalui file YAML untuk list ip camera.
+- Memantau status kamera CCTV secara otomatis dengan mengirimkan PING ke setiap kamera.
+- Mengirim notifikasi jika kamera mengalami masalah melalui Telegram.
+- Konfigurasi melalui file YAML untuk daftar IP kamera.
 
 ## Arsitektur & Komponen
 Sistem ini terdiri dari:
-- **Kamera**: Terhubung ke jaringan dan dimonitoring realtime.
+- **Kamera**: Terhubung ke jaringan dan dimonitoring secara real-time.
 - **Backend**: Mengelola status kamera dan logika pemantauan.
 - **Notifikasi**: Mengirimkan peringatan jika ada kamera yang tidak berfungsi.
 
-## Requirements
+## Prasyarat
 - Python 3.11
 - Package `openai` untuk interaksi dengan API OpenAI.
 
@@ -57,16 +57,16 @@ python bot.py
 ```
 
 ## Testing
-Testing dapat dilakukan dengan menjalankan command di telegram. Pastikan semua dependensi sudah terinstall.
+Testing dapat dilakukan dengan menjalankan command di Telegram. Pastikan semua dependensi sudah terinstall.
 
 ## Troubleshooting
 - Jika kamera tidak merespons, periksa koneksi jaringan.
 - Pastikan konfigurasi di `cameras.yaml` sudah benar.
 
 ## Deployment
-Untuk deployment,  dapat menggunakan Docker atau sistemd. Pastikan untuk mengonfigurasi file sesuai dengan ip segemntasi jaringan.
+Untuk deployment, dapat menggunakan Docker atau systemd. Pastikan untuk mengonfigurasi file sesuai dengan segmentasi jaringan.
 
-## Roadmap Fitur Terbaru
+## Roadmap
 - [ ] Penambahan fitur analisis video.
 - [ ] Integrasi dengan sistem notifikasi lebih lanjut.
 - [ ] Peningkatan antarmuka pengguna untuk monitoring. 
