@@ -1,0 +1,35 @@
+name: AI Docs
+
+on:
+  push:
+    branches: [ "main" ]   
+  workflow_dispatch:       
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install openai
+
+      - name: Generate README + Review
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4o-mini
+        run: |
+          python ai_readme_and_review.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md AI_CODE_REVIEW.md || true
+          git commit -m "chore(docs): refresh README & AI review" || echo "No changes to commit"
+          git push
