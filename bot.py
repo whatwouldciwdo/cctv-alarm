@@ -5,7 +5,7 @@ from datetime import datetime, time
 from pathlib import Path
 import json
 import os
-import html  # ⬅️ ganti helper escape
+import html  
 
 import yaml
 from dotenv import load_dotenv
@@ -20,7 +20,7 @@ try:
     from zoneinfo import ZoneInfo
     TZ_JAKARTA = ZoneInfo("Asia/Jakarta")
 except Exception:
-    TZ_JAKARTA = None  # fallback to server local time if zoneinfo unavailable
+    TZ_JAKARTA = None  
 
 # -------- Util --------
 def now_str():
@@ -75,7 +75,7 @@ class BotApp:
         if not self.admin_ids:
             raise RuntimeError("Set dulu ADMIN_CHAT_IDS di .env")
 
-        # --- muat config pertama kali ---
+        
         self._load_config()
 
         # --- State & subscribers/pending ---
@@ -114,7 +114,7 @@ class BotApp:
         self.app.add_handler(CallbackQueryHandler(self.cb_approval, pattern="^(approve|deny):"))
         self.app.add_handler(CallbackQueryHandler(self.cb_ping, pattern="^ping:"))
 
-        # Background monitoring job (disimpan handlernya utk bisa di-reschedule saat reload)
+        # Background job
         self.monitor_job = self.app.job_queue.run_repeating(
             self.monitor_tick,
             interval=self.poll,
@@ -169,7 +169,7 @@ class BotApp:
                 parse_mode=ParseMode.HTML,
             )
         except Exception:
-            # abaikan error ringan (MessageNotModified / race edit)
+            
             pass
 
     async def _animate_and_ping(self, chat_id: int, message_id: int, cam_name: str, host: str):
@@ -290,7 +290,7 @@ class BotApp:
         old_interval = self.poll
         try:
             self._load_config()
-            # Tambah state untuk kamera baru
+            
             for cam in self.cameras:
                 nm = cam["name"]
                 if nm not in self.state:
@@ -322,17 +322,17 @@ class BotApp:
         if not self.is_authorized(update.effective_chat.id):
             return await update.message.reply_html("🚫 Akses ditolak.")
         args = context.args
-        # Jika ada argumen → cari exact match by name, lalu ANIMASI
+        
         if args:
             name = " ".join(args).strip()
             cam = next((c for c in self.cameras if c["name"].lower() == name.lower()), None)
             if not cam:
                 return await update.message.reply_html("❌ Kamera tidak ditemukan. Ketik /ping tanpa argumen untuk memilih.")
-            # kirim pesan awal lalu animasi + hasil
+            
             msg = await update.message.reply_html(f"🔍 Pinging <b>{html.escape(cam['name'])}</b>")
             await self._animate_and_ping(update.effective_chat.id, msg.message_id, cam["name"], cam["host"])
             return
-        # Tanpa argumen → tampilkan pilihan kamera (dibagi per baris 2 tombol)
+        
         buttons = []
         row = []
         for i, cam in enumerate(self.cameras, start=1):
@@ -400,7 +400,7 @@ class BotApp:
         chat_id = q.message.chat.id
         message_id = q.message.message_id
 
-        # Ubah pesan tombol menjadi teks ping + animasi + hasil di pesan yang sama
+        
         await self._safe_edit(chat_id, message_id, f"🔍 Pinging <b>{html.escape(cam['name'])}</b>")
         await self._animate_and_ping(chat_id, message_id, cam["name"], cam["host"])
 
@@ -528,3 +528,4 @@ class BotApp:
 
 if __name__ == "__main__":
     BotApp().run()
+
